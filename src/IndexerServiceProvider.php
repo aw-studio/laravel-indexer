@@ -16,6 +16,8 @@ class IndexerServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/indexer.php', 'indexer');
+        
         $this->registerHtmlLoader();
         $this->registerRunCommand();
 
